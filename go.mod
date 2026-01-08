@@ -1,6 +1,6 @@
 module github.com/DblK/shottower
 
-go 1.18
+go 1.21
 
 require (
 	github.com/creasty/defaults v1.6.0
@@ -9,7 +9,6 @@ require (
 	github.com/onsi/ginkgo/v2 v2.13.0
 	github.com/onsi/gomega v1.29.0
 	github.com/spf13/cast v1.5.0
-	golang.org/x/exp v0.0.0-20220613132600-b0d781184e0d
 )
 
 require (

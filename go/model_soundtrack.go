@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package openapi
 
 import (
-	"golang.org/x/exp/slices"
+	"slices"
 )
 
 // Soundtrack - A music or audio file in mp3 format that plays for the duration of the rendered video or the length of the audio file, which ever is shortest.
