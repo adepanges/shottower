@@ -752,10 +752,6 @@ func (s *FFMPEG) ToString() []string {
 	parameters = append(parameters, "-r")
 	parameters = append(parameters, cast.ToString(s.fps))
 
-	// FIXME: Deprecated field (fps_mode??)
-	parameters = append(parameters, "-vsync") // https://stackoverflow.com/questions/18064604/frame-rate-very-high-for-a-muxer-not-efficiently-supporting-it
-	parameters = append(parameters, "2")
-
 	var outputName = s.generateOutputName()
 
 	if s.format == "gif" && s.quality == "high" {
@@ -802,3 +798,4 @@ func (s *FFMPEG) GetOutputFormat(parameters []string) ([]string, error) {
 
 	return parameters, nil
 }
+
