@@ -31,7 +31,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cast"
-	"slices"
+	"golang.org/x/exp/slices"
 )
 
 // Clip - A clip is a container for a specific type of asset, i.e. a title, image, video, audio or html. You use a Clip to define when an asset will display on the timeline, how long it will play for and transitions, filters and effects to apply to it.

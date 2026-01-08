@@ -31,7 +31,7 @@ import (
 
 	"github.com/creasty/defaults"
 	"github.com/spf13/cast"
-	"slices"
+	"golang.org/x/exp/slices"
 )
 
 // Output - The output format, render range and type of media to generate.

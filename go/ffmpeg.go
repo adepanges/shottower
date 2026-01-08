@@ -25,7 +25,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cast"
-	"slices"
+	"golang.org/x/exp/slices"
 )
 
 type FFMPEGSource struct {

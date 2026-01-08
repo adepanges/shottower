@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package openapi
 
-import "slices"
+import "golang.org/x/exp/slices"
 
 // Transition - In and out transitions for a clip - i.e. fade in and fade out
 type Transition struct {
