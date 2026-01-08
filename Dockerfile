@@ -1,22 +1,17 @@
 FROM golang:1.18 AS build
-WORKDIR /go/src
+WORKDIR /app
 
-# Copy dependency files first for better caching
-COPY go.mod go.sum ./
+# Copy all project files
+COPY . .
 
 # Download dependencies
 RUN go mod download
 
-# Copy source files
-COPY go ./go
-COPY main.go .
-
-ENV CGO_ENABLED=0
-
 # Build the application
+ENV CGO_ENABLED=0
 RUN go build -a -installsuffix cgo -o openapi .
 
 FROM scratch AS runtime
-COPY --from=build /go/src/openapi ./
+COPY --from=build /app/openapi ./
 EXPOSE 4000/tcp
 ENTRYPOINT ["./openapi"]
