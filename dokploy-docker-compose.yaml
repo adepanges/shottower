@@ -10,12 +10,12 @@ services:
     restart: unless-stopped
     networks:
       - dokploy-network
-    volumes:
-      - tmp_data:/tmp
+#     volumes:
+#       - tmp_data:/tmp
 
 
-volumes:
-  tmp_data:
+# volumes:
+#   tmp_data:
 
 networks:
   dokploy-network:
