@@ -11,7 +11,12 @@ RUN go mod download
 ENV CGO_ENABLED=0
 RUN go build -a -installsuffix cgo -o openapi .
 
-FROM scratch AS runtime
-COPY --from=build /app/openapi ./
+FROM alpine:3.18
+RUN apk add --no-cache ffmpeg gifski
+WORKDIR /root/
+
+# Copy the compiled binary from build stage
+COPY --from=build /app/openapi .
+
 EXPOSE 4000/tcp
 ENTRYPOINT ["./openapi"]
