@@ -10,10 +10,6 @@ services:
     restart: unless-stopped
     networks:
       - dokploy-network
-    resources:
-      limits:
-        cpus: 2
-        memory: 4g
 #     volumes:
 #       - tmp_data:/tmp
 
